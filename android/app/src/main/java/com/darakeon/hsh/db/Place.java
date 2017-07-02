@@ -147,9 +147,6 @@ public class Place
         private static final String TYPE_INT = " INTEGER";
         private static final String COMMA_SEP = ",";
 
-        public static final String SQL_DROP =
-                "DROP TABLE IF EXISTS " + TABLE_NAME;
-
         public static final String SQL_CREATE =
                 "CREATE TABLE IF NOT EXISTS " + TABLE_NAME + " (" +
                 _ID + TYPE_INT + " PRIMARY KEY" + COMMA_SEP +
