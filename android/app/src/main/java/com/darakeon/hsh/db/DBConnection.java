@@ -10,13 +10,15 @@ import java.util.ArrayList;
 
 public class DBConnection extends SQLiteOpenHelper
 {
-    public static final String DATABASE_NAME = "Place.db";
+    private static final String DATABASE_NAME = "Place.db";
+    private static final int DATABASE_VERSION = 1;
 
     public DBConnection(Context context) {
-        super(context, DATABASE_NAME, null, 1);
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
-    public void onCreate(SQLiteDatabase db) {
+    public void onCreate(SQLiteDatabase db)
+    {
         db.execSQL(Place.C.SQL_CREATE);
     }
 
