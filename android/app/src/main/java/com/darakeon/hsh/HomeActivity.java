@@ -20,9 +20,8 @@ public class HomeActivity extends AppCompatActivity
 
     public void goPlaceList(View view)
     {
-        Toast toast = new Toast(this);
-        toast.setText("Constructing!");
-        toast.show();
+        Intent intent = new Intent(this, AddActivity.class);
+        startActivity(intent);
     }
 
     public void goMaps(View view)
