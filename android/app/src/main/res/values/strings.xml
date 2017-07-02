@@ -7,4 +7,5 @@
     <string name="add_place">Adicionar</string>
     <string name="see_place_list">Ver Mapa</string>
     <string name="title_activity_maps">Places</string>
+    <string name="title_activity_add">Add</string>
 </resources>
