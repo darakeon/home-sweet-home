@@ -1,10 +1,8 @@
 package com.darakeon.hsh.db;
 
-import android.app.Activity;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.provider.BaseColumns;
-import android.view.View;
 
 import com.darakeon.hsh.AddActivity;
 import com.darakeon.hsh.R;
@@ -53,7 +51,10 @@ public class Place
         BackyardApart = activity.getBooleanField(R.id.field_backyard_apart);
         LightApart = activity.getBooleanField(R.id.field_light_apart);
         WaterApart = activity.getBooleanField(R.id.field_water_apart);
+
+        Discarded = false;
     }
+
 
 
     public ContentValues GetDBWithID()
@@ -78,15 +79,15 @@ public class Place
         values.put(C.COLUMN_NAME_ADDRESS, Address);
         values.put(C.COLUMN_NAME_VALUE, Value * 100);
 
-        values.put(C.COLUMN_NAME_ACCEPT_PETS, AcceptPets);
-        values.put(C.COLUMN_NAME_ACCEPT_KIDS, AcceptKids);
-        values.put(C.COLUMN_NAME_HAS_BACKYARD, HasBackyard);
+        values.put(C.COLUMN_NAME_ACCEPT_PETS, AcceptPets ? 1 : 0);
+        values.put(C.COLUMN_NAME_ACCEPT_KIDS, AcceptKids ? 1 : 0);
+        values.put(C.COLUMN_NAME_HAS_BACKYARD, HasBackyard ? 1 : 0);
 
-        values.put(C.COLUMN_NAME_BACKYARD_APART, BackyardApart);
-        values.put(C.COLUMN_NAME_LIGHT_APART, LightApart);
-        values.put(C.COLUMN_NAME_WATER_APART, WaterApart);
+        values.put(C.COLUMN_NAME_BACKYARD_APART, BackyardApart ? 1 : 0);
+        values.put(C.COLUMN_NAME_LIGHT_APART, LightApart ? 1 : 0);
+        values.put(C.COLUMN_NAME_WATER_APART, WaterApart ? 1 : 0);
 
-        values.put(C.COLUMN_NAME_DISCARDED, Discarded);
+        values.put(C.COLUMN_NAME_DISCARDED, Discarded ? 1 : 0);
 
         return values;
     }
