@@ -7,8 +7,8 @@ site/*/obj
 site/*.suo
 site/**.user
 site/*dotCover
-site/DFM.MVC/data/log_files
-site/DFM.MVC/Web.Release.config
+site/HSH.MVC/data/log_files
+site/HSH.MVC/Web.Release.config
 android/**.class
 android/**.apk
 android/**.dex
