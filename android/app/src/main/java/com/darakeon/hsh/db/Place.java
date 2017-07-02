@@ -36,6 +36,8 @@ public class Place
 
     public Place(AddActivity activity)
     {
+        Creation = Calendar.getInstance();
+
         Code = activity.getStringField(R.id.field_code);
         EstateAgency = activity.getStringField(R.id.field_estate_agency);
 
