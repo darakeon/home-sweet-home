@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.darakeon.hsh.db.DBConnection;
 import com.darakeon.hsh.db.Place;
@@ -21,11 +22,16 @@ public class AddActivity extends AppCompatActivity
     }
 
 
-    public void savePlace(View view)
+    public void savePlaceAndBack(View view)
     {
         Place place = new Place(this);
         DBConnection db = new DBConnection(this);
         db.Save(place);
+
+        Toast toast = Toast.makeText(this, R.string.save_success, Toast.LENGTH_SHORT);
+        toast.show();
+
+        this.finish();
     }
 
     public String getStringField(int r)

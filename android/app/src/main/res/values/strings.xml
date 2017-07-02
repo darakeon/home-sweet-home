@@ -20,4 +20,5 @@
     <string name="description">Descrição</string>
     <string name="address">Endereço</string>
     <string name="value">Valor</string>
+    <string name="save_success">Imóvel salvo com sucesso!</string>
 </resources>
