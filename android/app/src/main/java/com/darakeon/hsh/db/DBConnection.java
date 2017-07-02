@@ -51,11 +51,14 @@ public class DBConnection extends SQLiteOpenHelper
         cursor.moveToFirst();
         ArrayList<Place> placeList = new ArrayList<>();
 
-        do
+        if (cursor.getCount() > 0)
         {
-            Place place = new Place(cursor);
-            placeList.add(place);
-        } while((cursor.moveToNext()));
+            do
+            {
+                Place place = new Place(cursor);
+                placeList.add(place);
+            } while ((cursor.moveToNext()));
+        }
 
         return placeList;
     }
