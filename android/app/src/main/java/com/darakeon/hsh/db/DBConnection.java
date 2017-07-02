@@ -29,10 +29,38 @@ public class DBConnection extends SQLiteOpenHelper
     public long Save(Place place)
     {
         SQLiteDatabase db = getWritableDatabase();
-
         ContentValues values = place.GetDB();
 
-        return db.insert(Place.C.TABLE_NAME, null, values);
+        if (place.ID == 0)
+        {
+            return db.insert(Place.C.TABLE_NAME, null, values);
+        }
+        else
+        {
+            String selection = Place.C._ID + " = ?";
+            String[] selectionArgs = { String.valueOf(place.ID) };
+
+            return db.update(Place.C.TABLE_NAME, values, selection, selectionArgs);
+        }
+    }
+
+    public void Delete(Place place)
+    {
+        SQLiteDatabase db = getWritableDatabase();
+
+        String selection = Place.C._ID + " = ?";
+        String[] selectionArgs = { String.valueOf(place.ID) };
+
+        db.delete(Place.C.TABLE_NAME, selection, selectionArgs);
+    }
+
+    public void Update(Place place)
+    {
+        String selection = Place.C._ID + " = ?";
+        String[] selectionArgs = { String.valueOf(place.ID) };
+
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete(Place.C.TABLE_NAME, selection, selectionArgs);
     }
 
     public ArrayList<Place> GetAll()
