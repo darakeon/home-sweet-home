@@ -8,8 +8,8 @@ android {
         applicationId "com.darakeon.hsh"
         minSdkVersion 15
         targetSdkVersion 23
-        versionCode 1
-        versionName "1.0"
+        versionCode 1000001000
+        versionName "1.0.1.0"
     }
 
     signingConfigs {
