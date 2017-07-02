@@ -8,4 +8,16 @@
     <string name="see_place_list">Ver Mapa</string>
     <string name="title_activity_maps">Places</string>
     <string name="title_activity_add">Add</string>
+    <string name="accept_pets">Aceita Animais</string>
+    <string name="accept_kids">Aceita Crianças</string>
+    <string name="has_backyard">Tem quintal</string>
+    <string name="backyard_apart">Quintal Separado</string>
+    <string name="light_apart">Luz Separada</string>
+    <string name="water_apart">Água Separada</string>
+    <string name="save">Salvar</string>
+    <string name="code">Código</string>
+    <string name="estate_agency">Imobiliária</string>
+    <string name="description">Descrição</string>
+    <string name="address">Endereço</string>
+    <string name="value">Valor</string>
 </resources>

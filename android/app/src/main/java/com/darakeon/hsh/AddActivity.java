@@ -37,7 +37,11 @@ public class AddActivity extends AppCompatActivity
     public double getDoubleField(int r)
     {
         String text = getStringField(r);
-        return Double.parseDouble(text);
+
+        if (text.isEmpty())
+            return 0;
+        else
+            return Double.parseDouble(text);
     }
 
     public Boolean getBooleanField(int r)
