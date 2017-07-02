@@ -13,7 +13,7 @@ public class DBConnection extends SQLiteOpenHelper
     public static final String DATABASE_NAME = "Place.db";
 
     public DBConnection(Context context) {
-        super(context, DATABASE_NAME, null, 0);
+        super(context, DATABASE_NAME, null, 1);
     }
 
     public void onCreate(SQLiteDatabase db) {
